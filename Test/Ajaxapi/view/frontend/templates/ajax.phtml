@@ -1,0 +1,15 @@
+<h1>TEST</h1>
+<input id="intnum" type="number" />
+<h1><a id="button">Button</a></h1>
+
+<script type="text/javascript">
+    document.getElementById("button").onclick = function(){
+        require([
+            'jquery',
+            'testSum'
+        ], function ($j,test) {
+            var intnum = $j("#intnum").val();
+            test.twiceNumber(intnum);
+        });
+    };
+</script>
